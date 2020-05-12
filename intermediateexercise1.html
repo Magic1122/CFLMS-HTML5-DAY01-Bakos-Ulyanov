@@ -17,7 +17,7 @@
         border-radius: 5px;
         background-color: #f2f2f2;
         padding: 20px;
-        max-width: 55%;
+        width: 55%;
         margin: 0 auto;
         text-align: left;
       }
@@ -70,6 +70,19 @@
         border: 1px solid #ccc;
         border-radius: 4px;
         resize: vertical;
+      }
+      /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .container {
+          width: 100%;
+        }
+        .col-25-left,
+        .col-75-right,
+        input[type="submit"],
+        input[type="password"] {
+          width: 100%;
+          margin-top: 0;
+        }
       }
     </style>
     <title>Intermediate Exercise 1</title>
@@ -140,7 +153,7 @@
         </div>
         <div class="row">
           <div class="col-25-left">
-            <span>Gender: </span>
+            <label>Gender: </label>
           </div>
           <div class="col-75-right">
             <input
